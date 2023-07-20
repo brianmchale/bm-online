@@ -1,6 +1,24 @@
 // script.js
 window.addEventListener('DOMContentLoaded', function() {
   var photographs = [
+    { src: '18160003.JPG', title: 'Middleground #7', year: '2022' },
+    { src: '18160004.JPG', title: '', year: '2022' },
+    { src: '18160006.JPG', title: 'Middleground #8', year: '2022' },
+    { src: '18160007.JPG', title: 'Middleground #9', year: '2022' },
+    { src: '53020001.JPG', title: '', year: '2022' },
+    { src: '53020003.JPG', title: '', year: '2022' },
+    { src: '53020006.JPG', title: '', year: '2022' },
+    { src: '53020014.JPG', title: 'Middleground #2', year: '2022' },
+    { src: '53020019.JPG', title: 'Middleground #1', year: '2022' },
+    { src: '53020027.JPG', title: 'Middleground #3', year: '2022' },
+    { src: '53030011.JPG', title: '', year: '2022' },
+    { src: '53030014.JPG', title: '', year: '2022' },
+    { src: '53030015.JPG', title: 'Middleground #4', year: '2022' },
+    { src: '53030016.JPG', title: 'Middleground #5', year: '2022' },
+    { src: '53030034.jpg', title: 'Middleground #6', year: '2022' },
+    { src: '86840007.JPG', title: '', year: '2022' },
+    { src: '86840023.JPG', title: '', year: '2022' },
+    { src: '86850021.JPG', title: '', year: '2022' },
     { src: '86860006.JPG', title: 'Miami Beach Lifeguard', year: '2022' },
     { src: '86860007.JPG', title: 'Buzzard Rock, Asheville, NC', year: '2022' },
     { src: '86860009.JPG', title: 'Potty', year: '2022' },
@@ -21,16 +39,6 @@ window.addEventListener('DOMContentLoaded', function() {
     { src: 'IMG_2577.jpg', title: 'Billboard 0', year: '2023' },
     { src: 'IMG_2797.jpg', title: 'GSB', year: '2023' },
     { src: 'IMG_2850.jpg', title: 'Untitled', year: '2023' },
-    { src: 'grafitti1.png', title: 'Digital Deadstock Zine pg. 15-16', year: '2023' },
-    { src: '53020019.JPG', title: 'Middleground #1', year: '2022' },
-    { src: '53020014.JPG', title: 'Middleground #2', year: '2022' },
-    { src: '53020027.JPG', title: 'Middleground #3', year: '2022' },
-    { src: '53030015.JPG', title: 'Middleground #4', year: '2022' },
-    { src: '53030016.JPG', title: 'Middleground #5', year: '2022' },
-    { src: '53030034.jpg', title: 'Middleground #6', year: '2022' },
-    { src: '18160003.JPG', title: 'Middleground #7', year: '2022' },
-    { src: '18160006.JPG', title: 'Middleground #8', year: '2022' },
-    { src: '18160007.JPG', title: 'Middleground #9', year: '2022' },
     { src: 'Static Neuron #1.jpg', title: 'Static Neuron #1', year: '2022' },
     { src: 'Static Neuron #2.jpg', title: 'Static Neuron #2', year: '2022' },
     { src: 'Static Neuron #3.jpg', title: 'Static Neuron #3', year: '2022' },
@@ -41,6 +49,11 @@ window.addEventListener('DOMContentLoaded', function() {
     { src: 'Static Neuron #8.jpg', title: 'Static Neuron #8', year: '2022' },
     { src: 'Static Neuron #9.jpg', title: 'Static Neuron #9', year: '2022' },
     { src: 'Static Neuron #10.jpg', title: 'Static Neuron #10', year: '2022' },
+    { src: 'alleyway.png', title: '', year: '2023' },
+    { src: 'annasharon2_edit.png', title: '', year: '2023' },
+    { src: 'dtla2.png', title: '', year: '2023' },
+    { src: 'grafitti1.png', title: 'Digital Deadstock Zine pg. 15-16', year: '2023' },
+
     // Add more photographs as needed
   ];
 
