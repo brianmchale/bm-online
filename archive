@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Brian McHale</title>
+  <link rel="stylesheet" type="text/css" href="gpttestportfolio.css">
+  <link rel="icon" type="image/x-icon" href="https://static.wikia.nocookie.net/beyblade/images/7/74/Dragoon_S_%28Anime%29.png">
+  <script src="gpttestportfolio.js"></script>
+</head>
+<body>
+  <div class="sidebar">
+    <h1>Brian McHale</h1>
+    <p><i></i>No titles, please.</i></p>
+    <p><a href="about.html" style="color:black">About</a></p>
+    <p><a href="https://onebraintogether.com" style="color:#3400ff">One Brain Together</a></p>
+    <p><a href="https://instagram.com/brian.mchale" style="color:#d62976">@brian.mchale</a></p>
+    <p><a href="https://twitter.com/briandotmchale" style="color:lightblue">@briandotmchale</a></p>
+    <p><a href="mailto:brianmchale14@gmail.com" style="color:black">Contact</a></p>
+    <p id="photograph-info"></p>
+  </div>
+  <div class="main-content">
+    <h2>Project Archive</h2>
+    <h3>Product</h3>
+    <ul>
+      <li>Digital Deadstock - Screenprinted secondhand clothing collection & phygital zine</li>
+      <li>EcoPak Dry - Sustainable packaging prototype design</li>
+      <li>Desktop Cable Organizer - College industrial design project</li>
+      <li>Rest Your Foot Here - Footstops for downhill skateboarding</li>
+      <li>Misc. CAD Drawings</li>
+   </ul>
+
+    <h3>Branding</h3>
+    <ul>
+      <li>One Brain Together - Branding & logo design</li>
+      <li>McHale Energy - Branding & logo re-design</li>
+      <li>BU Cleantech Club - Branding & logo design</li>
+   </ul>
+
+  <h3>
+    <ul>
+      <li>OBTNYC/OBTLA Event Flyers</li>
+      <li>Obt. - Generative NFT art collection</li>
+      <li>New Neurons - Photography + AI art collection</li>
+      <li>One Brain Together - Web development</li>
+   </ul>
+  </div>
+</body>
+</html>
