@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Slideshow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .slide {
+            display: none;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .slide-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 8px;
+        }
+
+        .slide-caption p {
+            margin: 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            cursor: pointer;
+            padding: 8px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            border-radius: 50%;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-title">BRIANMCHALE.ONLINE</div>
+    <div class="slideshow-container">
+        <div class="slide">
+            <img src="/Users/brianmchale/Documents/DALL-E/DALL·E 2023-07-26 19.18.44 - mountain inside of an arena.png" alt="Image 1">
+        </div>
+        <div class="slide">
+            <img src="/Users/brianmchale/Documents/DALL-E/DALL·E 2022-06-30 13.36.12 - motorcycle caravan riding through an abandoned building.png" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="/Users/brianmchale/Documents/DALL-E/DALL·E 2022-06-30 13.40.51 - mosh pit at rave in abandoned building, stained glass.png" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="/Users/brianmchale/Documents/DALL-E/DALL·E 2022-07-08 08.20.00 - concrete couch and chairs in a postmodern home in the forest.png" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="/Users/brianmchale/Documents/DALL-E/DALL·E 2022-06-30 14.13.21 - electric car charger plugging into side of crash test dummy's head.png" alt="Image 2">
+        </div>        <div class="slide">
+            <img src="/Users/brianmchale/Documents/DALL-E/DALL·E 2022-06-30 13.47.46 - hoodie made out of leaves.png" alt="Image 2">
+        </div>
+    </div>
+
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+    <script>
+        let slideIndex = 1;
+        showSlide(slideIndex);
+
+        function changeSlide(n) {
+            showSlide(slideIndex += n);
+        }
+
+        function showSlide(n) {
+            const slides = document.getElementsByClassName("slide");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+</html>
