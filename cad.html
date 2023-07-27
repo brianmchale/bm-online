@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Grid</title>
+    <style>
+        body {
+            font-family: Futura, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .photo-grid1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+
+        .photo-item {
+            position: relative;
+        }
+
+        .photo-item img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 8px;
+            border-radius: 8px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .photo-item:hover .photo-caption {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h3><center>Misc. CAD Drawings</center></h3>
+    <div class="photo-grid1">
+        <div class="photo-item">
+            <img src="https://brianmchaleengineering.weebly.com/uploads/2/4/0/9/2409989/screwdriver-gearbox-1_orig.png" alt="Photo 2">
+        </div>
+        <div class="photo-item">
+            <img src="https://brianmchaleengineering.weebly.com/uploads/2/4/0/9/2409989/planetary-carrier-v2-1_2_orig.png" alt="Photo 2">
+        </div>
+        <div class="photo-item">
+            <img src="https://brianmchaleengineering.weebly.com/uploads/2/4/0/9/2409989/planetary-pinion-1_1_orig.png" alt="Photo 2">
+        </div>
+        <div class="photo-item">
+            <img src="https://brianmchaleengineering.weebly.com/uploads/2/4/0/9/2409989/ring-gear-1_1_orig.png" alt="Photo 2">
+        </div>
+        <div class="photo-item">
+            <img src="https://brianmchaleengineering.weebly.com/uploads/2/4/0/9/2409989/sun-gear-1_1_orig.png" alt="Photo 2">
+        </div>
+        <div class="photo-item">
+            <img src="/Users/brianmchale/Documents/PORTFOLIO/CAD:PRODUCT/EcoPak_endcap_final.jpg" alt="Photo 2">
+        </div>
+        <div class="photo-item">
+            <img src="/Users/brianmchale/Documents/PORTFOLIO/CAD:PRODUCT/drive-download-20230724T002201Z-001/ME359HW01P01_HexShaft.jpg" alt="Photo 2">
+        </div>
+        <div class="photo-item">
+            <img src="/Users/brianmchale/Documents/PORTFOLIO/CAD:PRODUCT/drive-download-20230724T002201Z-001/ME359HW01P02_AlignmentPlate.jpg" alt="Photo 2">
+        </div>
+        <div class="photo-item">
+            <img src="/Users/brianmchale/Documents/PORTFOLIO/CAD:PRODUCT/drive-download-20230724T002201Z-001/ME359HW01P03_CornerCube.jpg" alt="Photo 2">
+        </div>
+        <div class="photo-item">
+            <img src="/Users/brianmchale/Documents/PORTFOLIO/CAD:PRODUCT/drive-download-20230724T002201Z-001/ME359HW01P04_Strut.jpg" alt="Photo 2">
+        </div>
+    </div>
+</body>
+</html>
