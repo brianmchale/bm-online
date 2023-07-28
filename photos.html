@@ -19,9 +19,12 @@
 
         .slideshow-container {
             display: flex;
-            justify-content: center; /* Center the slides horizontally */
-            align-items: center; /* Center the slides vertically */
-            height: 100vh; /* Full viewport height */
+            flex-direction: column;
+            align-items: center; /* Center the slides horizontally */
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0; /* Optional padding for the slides */
+            min-height: 100vh; /* Set a minimum height to keep slides lower on the page */
             overflow: hidden; /* Hide horizontal scrollbar if images are larger */
         }
 
@@ -32,8 +35,9 @@
 
         .slide img {
             max-width: 100%;
-            max-height: 100%; /* Ensure the photo fits within the container */
+            max-height: 70vh; /* Limit the photo height, adjust as needed */
             display: inline-block; /* Remove any extra space below the image */
+            vertical-align: middle; /* Vertically center the image within the slide */
         }
 
         .slide-caption {
@@ -74,7 +78,8 @@
     </style>
 </head>
 <body>
-    <b><center><div class="page-title">BRIANMCHALE.ONLINE</div></center></b>
+    <h1><a href="https://brianmchale.online"><font color=black>BRIANMCHALE.ONLINE</font></a></h1>
+    <b><center><div class="page-title">Photography 2020-2023</div></center></b>
     <div class="slideshow-container">
         <div class="slide">
             <img src="18160003.JPG" alt="Image 1">
