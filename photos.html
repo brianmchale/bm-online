@@ -12,10 +12,15 @@
             background-color: #f1f1f1;
         }
 
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
         .slideshow-container {
             max-width: 800px;
             margin: 0 auto;
-            border: 1px solid #fff; /* White border around the photos */
+            overflow: hidden; /* Hide horizontal scrollbar if images are larger */
         }
 
         .slide {
@@ -24,10 +29,10 @@
         }
 
         .slide img {
-            max-width: 100%; /* Reduce the image size to fit within the slide */
-            height: auto;
-            border: 10px solid #fff; /* White border around the image */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+            max-width: 100%;
+            max-height: 100vh; /* Ensure the photo does not exceed the viewport height */
+            display: block;
+            margin: 0 auto;
         }
 
         .slide-caption {
