@@ -13,27 +13,21 @@
         }
 
         .slideshow-container {
-            position: relative;
             max-width: 800px;
             margin: 0 auto;
-        }
-
-        .page-title {
-            text-align: center;
-            font-size: 24px;
-            margin-bottom: 10px;
+            border: 1px solid #fff; /* White border around the photos */
         }
 
         .slide {
             display: none;
-            position: relative;
+            text-align: center; /* Center the photo within the slide */
         }
 
         .slide img {
-            width: 100%;
+            max-width: 100%; /* Reduce the image size to fit within the slide */
             height: auto;
-            display: block;
-            margin: 0 auto;
+            border: 10px solid #fff; /* White border around the image */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
         }
 
         .slide-caption {
