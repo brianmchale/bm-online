@@ -5,35 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BRIANMCHALE.ONLINE - PROJECTS/ARCHIVE</title>
     <link rel="icon" type="image/x-icon" href="https://static.wikia.nocookie.net/beyblade/images/7/74/Dragoon_S_%28Anime%29.png">
-<style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
 
-        .photo-grid1 {
+        .photo-grid1, .photo-grid2, .photo-grid3 {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
             gap: 10px;
             max-width: 800px;
             margin: 20px auto;
+        }
+
+        .photo-grid1 {
+            grid-template-columns: repeat(6, 1fr);
         }
 
         .photo-grid2 {
-            display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 10px;
-            max-width: 800px;
-            margin: 20px auto;
         }
 
         .photo-grid3 {
-            display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            max-width: 800px;
-            margin: 20px auto;
         }
 
         .photo-item {
@@ -41,6 +36,7 @@
             filter: grayscale(100%); /* Apply grayscale filter by default */
             display: inline-block; /* Set display to inline-block */
             text-align: center; /* Center the image and caption */
+            cursor: pointer; /* Change cursor to pointer on hover */
         }
 
         .photo-item img {
@@ -70,225 +66,124 @@
         .photo-item:hover .photo-caption {
             opacity: 1;
         }
+
+        .dropdown-content {
+            display: none; /* Hidden by default */
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+
+        .dropdown-content img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .dropdown-content p {
+            text-align: center;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
     <h1><center><a href="https://brianmchale.online"><font color=black>BRIANMCHALE.ONLINE</font></a></center></h1>
     <h3><center>Product Design & Engineering</center></h3>
+
+    <!-- Project 1: The Hundreds by Caos Mōte -->
     <div class="photo-grid3">
-        <div class="photo-item">
-	    <a href="ryfh.html">
-                <img src="https://storage.googleapis.com/thehundreds/media/2024/04/243840e4-1x1-the-hundreds-x-caos-mote-lamp-with-items.jpg" alt="Photo 2">
-                <div class="photo-caption">The Hundreds by Caos Mōte</div>
-	    </a>
+        <div class="photo-item" onclick="toggleDropdown(event, 'hundreds-content')">
+            <img src="https://storage.googleapis.com/thehundreds/media/2024/04/243840e4-1x1-the-hundreds-x-caos-mote-lamp-with-items.jpg" alt="Photo 2">
+            <div class="photo-caption">The Hundreds by Caos Mōte</div>
         </div>
-        <div class="photo-item">
-	    <a href="cablemanager.html">
-                <img src="images/IMG_2417.jpg" alt="Photo 3">
-                <div class="photo-caption">Communion Chips</div>
-	    </a>
-        </div>
-        <div class="photo-item">
-	    <a href="ecopak.html">
-		<img src="https://www.caosmote.com/cdn/shop/files/pressed-flower-1x1-shopify-2_26ae97bf-64ad-47a6-b359-b2b9f3be7377_540x.jpg?v=1700303331" alt="Photo 1">
-            	<div class="photo-caption">Caos Mōte Concrete Link Necklace</div>
-	    </a>
-        </div>
-       <div class="photo-item">
-	    <a href="cnc.html">
-            	<img src="images/day bed.jpg" alt="Photo 2">
-            	<div class="photo-caption">The Hundreds Day Bed</div>
-	    </a>
-        </div>
-    </div>
-    <div class="photo-grid3">
-        <div class="photo-item">
-	    <a href="ryfh.html">
-                <img src="images/diesel.jpg" alt="Photo 2">
-                <div class="photo-caption">Diesel Living by Caos Mōte</div>
-	    </a>
-        </div>
-        <div class="photo-item">
-	    <a href="">
-                <img src="images/cr.jpg" alt="Photo 3">
-                <div class="photo-caption">Corsi Rosenthal Box</div>
-	    </a>
-        </div>
-        <div class="photo-item">
-	    <a href="">
-		<img src="images/aim keychain.jpg" alt="Photo 1">
-            	<div class="photo-caption">AIM Plush Keychain</div>
-	    </a>
-        </div>
-       <div class="photo-item">
-	    <a href="cnc.html">
-            	<img src="images/fragrance.jpg" alt="Photo 2">
-            	<div class="photo-caption">Caos Mōte Petrichor Fragrance Bottle</div>
-	    </a>
-        </div>
-    </div>
-    <div class="photo-grid3">
-        <div class="photo-item">
-	    <a href="ryfh.html">
-                <img src="images/IMG_4022.jpg" alt="Photo 2">
-                <div class="photo-caption">RYFH Footstops</div>
-	    </a>
-        </div>
-        <div class="photo-item">
-	    <a href="cablemanager.html">
-                <img src="images/Desktop Cable Organizer.jpg" alt="Photo 3">
-                <div class="photo-caption">Desktop Cable Organizer</div>
-	    </a>
-        </div>
-        <div class="photo-item">
-	    <a href="ecopak.html">
-		<img src="images/IMG_4023.jpg" alt="Photo 1">
-            	<div class="photo-caption">CrossTek EcoPak Dry</div>
-	    </a>
-        </div>
-       <div class="photo-item">
-	    <a href="cnc.html">
-            	<img src="images/lasornator.jpg" alt="Photo 2">
-            	<div class="photo-caption">Laser-Guided CNC Machine</div>
-	    </a>
-        </div>
-    </div>
-    <div class="photo-grid3">
-        <div class="photo-item">
-	    <a href="generator.html">
-            	<img src="images/generator.jpg" alt="Photo 3">
-            	<div class="photo-caption">Disaster Crank Generator</div>
-	    </a>
-        </div>
-        <div class="photo-item">
-	    <a href="hotwiretool.html">
-            	<img src="images/hotwiretool.jpg" alt="Photo 3">
-            	<div class="photo-caption">Hot Wire Tool</div>
-	    </a>
-        </div>
-        <div class="photo-item">
-	    <a href="gasket.html">
-            	<img src="images/gasket.jpg" alt="Photo 2">
-            	<div class="photo-caption">Gasket</div>
-	    </a>
-        </div>
-        <div class="photo-item">
-	    <a href="cad.html">
-            	<img src="images/misc cad.jpg" alt="Photo 1">
-            	<div class="photo-caption">Misc. CAD Drawings</div>
-	    </a>
+        <div id="hundreds-content" class="dropdown-content">
+            <div class="photo-grid2">
+                <div class="photo-item">
+                    <img src="images/IMG_3470.JPG" alt="Photo 2">
+                </div>
+                <div class="photo-item">
+                    <img src="images/IMG_4018.jpg" alt="Photo 2">
+                </div>
+                <div class="photo-item">
+                    <img src="images/Screen Shot 2023-07-22 at 5.00.12 PM.png" alt="Photo 2">
+                </div>
+                <div class="photo-item">
+                    <img src="images/IMG_4017.jpg" alt="Photo 2">
+                </div>
+                <div class="photo-item">
+                    <img src="images/IMG_3472.JPG" alt="Photo 2">
+                </div>
+            </div>
+            <p><center>RYFH (Rest Your Foot Here) Footstops - A limited-run, 3D printed downhill skateboarding product, designed to give riders a reference point on their deck when racing.<br>Product demonstrated by team rider Brian Monk at Central Mass Skate Festival.</p></center>
         </div>
     </div>
 
+    <!-- Repeat for other project items -->
+    <!-- Example for another project -->
+    <div class="photo-grid3">
+        <div class="photo-item" onclick="toggleDropdown(event, 'cablemanager-content')">
+            <img src="images/IMG_2417.jpg" alt="Photo 3">
+            <div class="photo-caption">Communion Chips</div>
+        </div>
+        <div id="cablemanager-content" class="dropdown-content">
+            <div class="photo-grid2">
+                <div class="photo-item">
+                    <img src="images/IMG_3470.JPG" alt="Photo 2">
+                </div>
+                <div class="photo-item">
+                    <img src="images/IMG_4018.jpg" alt="Photo 2">
+                </div>
+            </div>
+            <p><center>Desktop Cable Organizer - A sleek and functional solution for managing cables on your desk.</p></center>
+        </div>
+    </div>
 
-	
+    <!-- Add more projects here following the same structure -->
+
     <h3><center><a href="https://onebraintogether.com"><font color=black>Clothing</font></a></center></h3>
     <div class="photo-grid2">
         <div class="photo-item">
-	    <a href="http://www.nfcarhartt.com/">
+            <a href="http://www.nfcarhartt.com/">
                 <img src="images/NFCarhartt.jpg" alt="Photo 2">
                 <div class="photo-caption">NFCarhartt</div>
             </a>
         </div>
-        <div class="photo-item">
-	    <a href="">
-                <img src="images/capsule.jpg" alt="Photo 3">
-                <div class="photo-caption">OBT 2024 Capsule</div>
-	    </a>
-        </div>
-        <div class="photo-item">
-	    <a href="">
-                <img src="images/IMG_2422.jpg" alt="Photo 1">
-                <div class="photo-caption">Museum of Sex by Caos Mōte</div>
-            </a>
-	</div>
-        <div class="photo-item">
-	    <a href="https://onebraintogether.com/digitaldeadstock">
-                <img src="images/obtnyc_1.png" alt="Photo 2">
-                <div class="photo-caption">Digital Deadstock</div>
-	    </a>
-        </div>
-        <div class="photo-item">
-	    <a href="https://onebraintogether.com">
-                <img src="images/hamzat shirt.png" alt="Photo 1">
-                <div class="photo-caption">Hamzat Collects Faces</div>
-	    </a>
-        </div>
+        <!-- Add more clothing items here -->
     </div>
 
-    
     <h3><center>Digital Art & Photography</center></h3>
     <div class="photo-grid3">
         <div class="photo-item">
-	    <a href="https://grippingbeasts.bandcamp.com/album/after-maps-a-topography-of-the-future">
-            	<img src="https://f4.bcbits.com/img/a2980579672_16.jpg" alt="Photo 3">
-            	<div class="photo-caption">Gripping Beasts</div>
-	    </a>
+            <a href="https://grippingbeasts.bandcamp.com/album/after-maps-a-topography-of-the-future">
+                <img src="https://f4.bcbits.com/img/a2980579672_16.jpg" alt="Photo 3">
+                <div class="photo-caption">Gripping Beasts</div>
+            </a>
         </div>
-        <div class="photo-item">
-	    <a href="https://zora.co/collect/0xa018f4475c9d142c644f2f916726060c4c180a19">
-            	<img src="images/product-coverimage-ig.png" alt="Photo 3">
-            	<div class="photo-caption">Digital Deadstock Zine</div>
-	    </a>
-        </div>
-        <div class="photo-item">
-	    <a href="https://onebraintogether.com/obt">
-            	<img src="https://i.seadn.io/gae/0is2twgVvHkIBAK55rgfg9OJRQ4QsnwlfP7Dw8yMT9vMNgWDA87jqKawyR47vgh6hPBemCtk7aJEyoFvBee8BciIR5ifQe5uoARbSyo?auto=format&dpr=1&w=640" alt="Photo 1">
-            	<div class="photo-caption">Obt.</div>
-	    </a>
-        </div>
-        <div class="photo-item">
-	    <a href="https://onebraintogether.com/newneurons">
-            	<img src="images/Static Neuron #1.jpg" alt="Photo 1">
-            	<div class="photo-caption">New Neurons</div>
-	    </a>
-        </div>
+        <!-- Add more digital art items here -->
     </div>
 
     <h3><center>Branding & Graphic Design</center></h3>
     <div class="photo-grid3">
         <div class="photo-item">
-	    <a href="">
-            	<img src="" alt="Photo 2">
-            	<div class="photo-caption">NFCarhartt</div>
-	    </a>
+            <a href="">
+                <img src="" alt="Photo 2">
+                <div class="photo-caption">NFCarhartt</div>
+            </a>
         </div>
-        <div class="photo-item">
-	    <a href="">
-            	<img src="images/chips.jpg" alt="Photo 3">
-            	<div class="photo-caption">Communion Chips</div>
-	    </a>
-        </div>
-        <div class="photo-item">
-	    <a href="">
-            	<img src="images/Untitled5.png" alt="Photo 2">
-            	<div class="photo-caption">Therefore You</div>
-	    </a>
-        </div>
-        <div class="photo-item">
-	    <a href="">
-            	<img src="images/hundreds lightning logo.jpg" alt="Photo 2">
-            	<div class="photo-caption">The Hundreds by Caos Mōte</div>
-	    </a>
-        </div>
-        <div class="photo-item">
-	    <a href="obtbranding.html">
-            	<img src="images/newlogo3.png" alt="Photo 2">
-            	<div class="photo-caption">One Brain Together Branding</div>
-	    </a>
-        </div>
-        <div class="photo-item">
-	    <a href="mchalerebrand.html">
-            	<img src="images/McHale Logo 2020 FINAL.png" alt="Photo 3">
-            	<div class="photo-caption">McHale Energy Branding Redesign</div>
-	    </a>
-        </div>
-        <div class="photo-item">
-	    <a href="cleantechbranding.html">
-            	<img src="images/cleantech_club_logo_square_mixed.png" alt="Photo 2">
-            	<div class="photo-caption">BU Cleantech Club Branding</div>
-	    </a>
-        </div>
+        <!-- Add more branding items here -->
     </div>
+
+    <script>
+        function toggleDropdown(event, id) {
+            event.preventDefault(); // Prevent the default link behavior
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
