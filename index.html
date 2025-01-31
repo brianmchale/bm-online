@@ -12,6 +12,51 @@
             padding: 0;
         }
 
+        /* Header Styles */
+        .header {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .header-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px; /* Space between links */
+            margin-top: 10px;
+        }
+
+        .header-links a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            font-weight: bold; /* Match title font formatting */
+            cursor: pointer;
+        }
+
+        .header-links a:hover {
+            text-decoration: underline;
+        }
+
+        .header-dropdown {
+            display: none; /* Hidden by default */
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            border-radius: 8px;
+            text-align: center;
+            width: 100%; /* Take up full width */
+            grid-column: span 4; /* Span all 4 columns to push content below */
+        }
+        
+        /* Footer Styles */
+        .footer {
+            text-align: center;
+            margin: 40px 0 20px 0;
+            font-size: 14px;
+            color: #666;
+        }
+
         .photo-grid1, .photo-grid2, .photo-grid3 {
             display: grid;
             gap: 10px;
@@ -100,12 +145,25 @@
     </style>
 </head>
 
-
 <body>
-    <h1><center><a href="https://brianmchale.online"><font color=black>BRIANMCHALE.ONLINE</font></a></center></h1>
-    <h3><center>Product Design & Engineering</center></h3>
+    <div class="header">
+        <h1><a href="https://brianmchale.online"><font color=black>BRIANMCHALE.ONLINE</font></a></h1>
+        <div class="header-links">
+            <a onclick="toggleHeaderDropdown(event, 'about-dropdown')">ABOUT</a>
+            <a href="https://onebraintogether.com/distro" target="_blank">STORE</a>
+            <a onclick="toggleHeaderDropdown(event, 'contact-dropdown')">CONTACT</a>
+        </div>
+        <!-- Header Dropdowns -->
+        <div id="about-dropdown" class="header-dropdown">
+            <p>I (Brian McHale, he/his) am an artist and engineer based in Long Island City, New York. I focus on bringing a creative approach to tech and product design. My background is in mechanical engineering, sustainable design, and photography. In 2021, I founded a creative studio called One Brain Together, an ongoing project that focuses on Internet culture and contemporary politics.</p>
+        </div>
+        <div id="contact-dropdown" class="header-dropdown">
+            <p><strong>Email:</strong> <a href="mailto:brianmchale14@gmail.com"><font color=black>brianmchale14@gmail.com</font></a><br><strong>Instagram:</strong> <a href="https://www.instagram.com/brian.mchale/"><font color=black>@brian.mchale</font></a></p>
+        </div>
+    </div>
 
     <!-- Product Design & Engineering Section -->
+    <h3><center>PRODUCT DESIGN & ENGINEERING</center></h3>
     <div class="photo-grid3">
         <!-- Project 1: The Hundreds by Caos Mōte -->
         <div class="photo-item" onclick="toggleDropdown(event, 'hundreds-content')">
@@ -178,7 +236,7 @@
 
         <!-- Project 4: Communion Chips -->
         <div class="photo-item">
-            <a href="http://www.communionchips.com/">
+            <a href="http://www.communionchips.com/" target="_blank">
                 <img src="images/chips2.jpg" alt="Photo 2">
                 <div class="photo-caption">Communion Chips</div>
             </a>
@@ -456,7 +514,7 @@
 
     <!-- Repeat for other dropdown content sections -->
 
-    <h3><center><font color=black>Clothing</font></center></h3>
+    <h3><center><font color=black>CLOTHING</font></center></h3>
     <div class="photo-grid3">
         <div class="photo-item">
             <a href="http://www.nfcarhartt.com/">
@@ -513,7 +571,7 @@
     </div>
 
     <!-- Add more digital art items here -->
-    <h3><center>Digital Art & Photography</center></h3>
+    <h3><center>DIGITAL ART & PHOTOGRAPHY</center></h3>
     <div class="photo-grid3">
         <div class="photo-item">
             <a href="https://grippingbeasts.bandcamp.com/album/after-maps-a-topography-of-the-future">
@@ -542,7 +600,7 @@
     </div>
 
     <!-- Add branding items here -->    
-    <h3><center>Branding & Graphic Design</center></h3>
+    <h3><center>BRANDING & GRAPHIC DESIGN</center></h3>
     <div class="photo-grid3">
         <div class="photo-item">
             <a href="http://www.nfcarhartt.com/">
@@ -588,8 +646,13 @@
         </div>
     </div>
 
-<script>
+    <div class="footer">
+        &copy; 2025 One Brain Together. All rights reserved.
+    </div>
+
+    <script>
         let openDropdown = null; // Track the currently open dropdown
+        let openHeaderDropdown = null; // Track the currently open header dropdown
 
         function toggleDropdown(event, id) {
             event.preventDefault(); // Prevent the default link behavior
@@ -608,6 +671,26 @@
             } else {
                 content.style.display = "block";
                 openDropdown = content;
+            }
+        }
+
+        function toggleHeaderDropdown(event, id) {
+            event.preventDefault(); // Prevent the default link behavior
+
+            const content = document.getElementById(id);
+
+            // Close the previously open header dropdown
+            if (openHeaderDropdown && openHeaderDropdown !== content) {
+                openHeaderDropdown.style.display = "none";
+            }
+
+            // Toggle the clicked header dropdown
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                openHeaderDropdown = null;
+            } else {
+                content.style.display = "block";
+                openHeaderDropdown = content;
             }
         }
     </script>
