@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRIANMCHALE.ONLINE</title>
+    <link rel="icon" type="image/x-icon" href="https://static.wikia.nocookie.net/beyblade/images/7/74/Dragoon_S_%28Anime%29.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+ 	/* Header Styles */
+        .header {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .header-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px; /* Space between links */
+            margin-top: 10px;
+        }
+
+        .header-links a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            font-weight: bold; /* Match title font formatting */
+            cursor: pointer;
+        }
+
+        .header-links a:hover {
+            text-decoration: underline;
+        }
+
+        .header-dropdown {
+            display: none; /* Hidden by default */
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            border-radius: 8px;
+            text-align: center;
+            width: 100%; /* Take up full width */
+            grid-column: span 4; /* Span all 4 columns to push content below */
+        }
+        /* Footer Styles */
+        .footer {
+            text-align: center;
+            margin: 40px 0 20px 0;
+            font-size: 14px;
+            color: #666;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        .product {
+            position: relative;
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            width: 259px;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+            border-radius: 10px;
+            margin: 10px;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .arrow.left {
+            left: 10px;
+        }
+        .arrow.right {
+            right: 10px;
+        }
+        .product:hover .arrow {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            table, th, td {
+                border: none;
+            }
+            table {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            td {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+            .product {
+                width: 90%;
+                max-width: 300px;
+            }
+            .arrow {
+                font-size: 18px;
+            }
+        }
+    </style>
+    <script>
+        if (window.location.pathname !== window.location.pathname.toLowerCase()) {
+            window.location.href = window.location.origin + window.location.pathname.toLowerCase();
+        }
+    </script>
+</head>
+
+<body>
+<div class="header">
+        <h1><a href="https://brianmchale.online"><font color=black>BRIANMCHALE.ONLINE</font></a></h1>
+        <div class="header-links">
+            <a onclick="toggleHeaderDropdown(event, 'about-dropdown')">ABOUT</a>
+            <a href="https://onebraintogether.com/distro" target="_blank">STORE</a>
+            <a onclick="toggleHeaderDropdown(event, 'contact-dropdown')">CONTACT</a>
+        </div>
+        <!-- Header Dropdowns -->
+        <div id="about-dropdown" class="header-dropdown">
+            <p>My name is Brian McHale (he/his) and I am an artist and engineer based in Long Island City, New York. I aim to bring a creative approach to tech and product design through my work, drawing from a background in mechanical engineering, sustainable design, and photography. In 2022, I founded One Brain Together, a creative studio focused on Internet culture and contemporary politics.</p>
+        </div>
+        <div id="contact-dropdown" class="header-dropdown">
+            <p><strong>Email:</strong> <a href="mailto:brianmchale14@gmail.com"><font color=black>brianmchale14@gmail.com</font></a><br><strong>Instagram:</strong> <a href="https://www.instagram.com/brian.mchale/"><font color=black>@brian.mchale</font></a></p>
+        </div>
+    </div>
+    
+    <table>
+        <tr>
+            <td>
+                <div class="product" data-images='["distro/subscribe.jpg"]'>
+                    <img src="distro/subscribe.jpg" alt="Subscribe Box Logo Tee" class="product-image" style="width: 100%;">
+                    <span class="arrow left" onclick="prevImage(this)">&#10094;</span>
+                    <span class="arrow right" onclick="nextImage(this)">&#10095;</span>
+                    <div style="padding: 20px;">
+                        <p style="font-size: 18px; line-height: 20px;">Subscribe Box Logo Tee</p>
+                        <p style="font-size: 18px; line-height: 20px; font-weight: 600;">$44.00</p>
+                        <a target="_blank" href="https://square.link/u/UoGULPTa" style="
+                        display: inline-block;
+                        font-size: 18px;
+                        line-height: 48px;
+                        height: 48px;
+                        color: #ffffff;
+                        min-width: 212px;
+                        background-color: #3400ff;
+                        text-align: center;
+                        box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+                        border-radius: 50px;">Buy now</a>
+                    </div>
+                </div>
+            </td>
+         </tr>
+    </table>
+
+    <hr style="border: 1px solid rgb(2, 2, 2);">
+
+    <div class="footer">
+        &copy; 2025 One Brain Together. All rights reserved.
+    </div>
+    <script>
+        function nextImage(element) {
+            const productDiv = element.closest('.product');
+            const images = JSON.parse(productDiv.getAttribute('data-images'));
+            const imgElement = productDiv.querySelector('.product-image');
+            const currentImage = imgElement.getAttribute('src');
+            const currentIndex = images.indexOf(currentImage);
+            const nextIndex = (currentIndex + 1) % images.length;
+            imgElement.setAttribute('src', images[nextIndex]);
+        }
+
+        function prevImage(element) {
+            const productDiv = element.closest('.product');
+            const images = JSON.parse(productDiv.getAttribute('data-images'));
+            const imgElement = productDiv.querySelector('.product-image');
+            const currentImage = imgElement.getAttribute('src');
+            const currentIndex = images.indexOf(currentImage);
+            const prevIndex = (currentIndex - 1 + images.length) % images.length;
+            imgElement.setAttribute('src', images[prevIndex]);
+        }
+    </script>
+</body>
+</html>
