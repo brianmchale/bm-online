@@ -190,5 +190,49 @@
             imgElement.setAttribute('src', images[prevIndex]);
         }
     </script>
+    <script>
+        let openDropdown = null; // Track the currently open dropdown
+        let openHeaderDropdown = null; // Track the currently open header dropdown
+
+        function toggleDropdown(event, id) {
+            event.preventDefault(); // Prevent the default link behavior
+
+            const content = document.getElementById(id);
+
+            // Close the previously open dropdown
+            if (openDropdown && openDropdown !== content) {
+                openDropdown.style.display = "none";
+            }
+
+            // Toggle the clicked dropdown
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                openDropdown = null;
+            } else {
+                content.style.display = "block";
+                openDropdown = content;
+            }
+        }
+
+        function toggleHeaderDropdown(event, id) {
+            event.preventDefault(); // Prevent the default link behavior
+
+            const content = document.getElementById(id);
+
+            // Close the previously open header dropdown
+            if (openHeaderDropdown && openHeaderDropdown !== content) {
+                openHeaderDropdown.style.display = "none";
+            }
+
+            // Toggle the clicked header dropdown
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                openHeaderDropdown = null;
+            } else {
+                content.style.display = "block";
+                openHeaderDropdown = content;
+            }
+        }
+    </script>
 </body>
 </html>
